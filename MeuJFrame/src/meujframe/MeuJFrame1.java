@@ -4,6 +4,9 @@
  */
 package meujframe;
 
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 
 /**
  *
@@ -17,6 +20,9 @@ public class MeuJFrame1 extends javax.swing.JFrame {
     public MeuJFrame1() {
         setUndecorated(true);
         initComponents();
+        Painel_Cadastro.setVisible(false);
+        Painel_relatorio.setVisible(false);
+        Botao_comprovante.setVisible(false);
     }
 
     /**
@@ -38,18 +44,62 @@ public class MeuJFrame1 extends javax.swing.JFrame {
         Campo_usuario = new javax.swing.JTextField();
         Campo_senha = new javax.swing.JPasswordField();
         Label_cadastro = new javax.swing.JLabel();
-        Botao_cadastro = new javax.swing.JButton();
         Botao_entrar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        Painel_Cadastro = new javax.swing.JPanel();
+        Foto_cadastro = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        Fecha_Cadastro = new javax.swing.JLabel();
+        Campos_cadastro = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        Label_responsavel = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        Underline_responsavel = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        Campo_nome = new javax.swing.JTextField();
+        jLabel23 = new javax.swing.JLabel();
+        Campo_texto_responsavel = new javax.swing.JTextField();
+        Campo_sobrenome = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
+        Campo_turma = new javax.swing.JTextField();
+        Campo_nascimento = new javax.swing.JFormattedTextField();
+        Aviso_responsavel = new javax.swing.JLabel();
+        Cadastro_concluido = new javax.swing.JLabel();
+        Botao_comprovante = new javax.swing.JButton();
+        Prencha_campos = new javax.swing.JLabel();
+        Painel_relatorio = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel21 = new javax.swing.JLabel();
+        Fecha_Cadastro1 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        Label_relatorio_reponsavel = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        Relatorio_nome = new javax.swing.JLabel();
+        Relatorio_sobrenome = new javax.swing.JLabel();
+        Relatorio_nascimento = new javax.swing.JLabel();
+        Relatorio_turma = new javax.swing.JLabel();
+        Relatorio_responsavel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
         setLocation(new java.awt.Point(50, 50));
         setMaximumSize(new java.awt.Dimension(530, 560));
         setResizable(false);
+        setSize(new java.awt.Dimension(530, 560));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Painel_foto_login.setBackground(new java.awt.Color(255, 255, 255));
@@ -82,12 +132,12 @@ public class MeuJFrame1 extends javax.swing.JFrame {
             Painel_foto_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Painel_foto_loginLayout.createSequentialGroup()
                 .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 153, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 113, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(197, 197, 197))
         );
 
-        getContentPane().add(Painel_foto_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 0, 200, 600));
+        getContentPane().add(Painel_foto_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 0, 200, 560));
 
         Painel_login.setBackground(new java.awt.Color(102, 0, 153));
         Painel_login.setPreferredSize(new java.awt.Dimension(330, 600));
@@ -130,21 +180,6 @@ public class MeuJFrame1 extends javax.swing.JFrame {
         Label_cadastro.setText("Não tem cadastro?");
         Painel_login.add(Label_cadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(55, 301, -1, -1));
 
-        Botao_cadastro.setText("Cadastre-se");
-        Botao_cadastro.setBorder(null);
-        Botao_cadastro.setBorderPainted(false);
-        Botao_cadastro.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                Botao_cadastroMouseClicked(evt);
-            }
-        });
-        Botao_cadastro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Botao_cadastroActionPerformed(evt);
-            }
-        });
-        Painel_login.add(Botao_cadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 297, 85, 24));
-
         Botao_entrar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Botao_entrar.setText("Entrar");
         Botao_entrar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 0));
@@ -156,7 +191,7 @@ public class MeuJFrame1 extends javax.swing.JFrame {
         Painel_login.add(Botao_entrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 370, 100, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/meujframe/Images/instragram.png"))); // NOI18N
-        Painel_login.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 460, 90, 82));
+        Painel_login.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 460, 90, 82));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/meujframe/Images/Cadeado.png"))); // NOI18N
         Painel_login.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 204, -1, 39));
@@ -166,9 +201,359 @@ public class MeuJFrame1 extends javax.swing.JFrame {
 
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Odesyle Moreira");
-        Painel_login.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 540, -1, -1));
+        Painel_login.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 536, -1, 20));
 
-        getContentPane().add(Painel_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 600));
+        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText("Cadastre-se");
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel7MousePressed(evt);
+            }
+        });
+        Painel_login.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 300, 80, 20));
+
+        getContentPane().add(Painel_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 560));
+
+        Painel_Cadastro.setMaximumSize(new java.awt.Dimension(530, 560));
+
+        Foto_cadastro.setBackground(new java.awt.Color(255, 255, 255));
+        Foto_cadastro.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/meujframe/Images/usuario-removebg-preview-removebg-preview.png"))); // NOI18N
+        Foto_cadastro.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 160, 155));
+
+        Fecha_Cadastro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/meujframe/Images/icone_fechar.png"))); // NOI18N
+        Fecha_Cadastro.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Fecha_CadastroMouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                Fecha_CadastroMousePressed(evt);
+            }
+        });
+        Foto_cadastro.add(Fecha_Cadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        Campos_cadastro.setBackground(new java.awt.Color(102, 0, 153));
+        Campos_cadastro.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel9.setFont(new java.awt.Font("Ink Free", 0, 48)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Cadastro");
+        Campos_cadastro.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, 59));
+
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Nome :");
+        Campos_cadastro.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 80, 30));
+
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("Sobrenome :");
+        Campos_cadastro.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 110, 20));
+
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setText("Nascimento :");
+        Campos_cadastro.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 110, 30));
+
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("Turma :");
+        Campos_cadastro.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 80, 40));
+
+        Label_responsavel.setForeground(new java.awt.Color(255, 255, 255));
+        Label_responsavel.setText("Responsável :");
+        Campos_cadastro.add(Label_responsavel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 110, 30));
+
+        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jButton1.setText("Cadastre-se");
+        jButton1.setBorder(null);
+        jButton1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jButton1FocusLost(evt);
+            }
+        });
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        Campos_cadastro.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 400, 190, 60));
+
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setText("__________________________");
+        Campos_cadastro.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, -1, -1));
+
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setText("__________________________");
+        Campos_cadastro.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, -1, -1));
+
+        Underline_responsavel.setForeground(new java.awt.Color(255, 255, 255));
+        Underline_responsavel.setText("__________________________");
+        Campos_cadastro.add(Underline_responsavel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 300, -1, -1));
+
+        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel22.setText("__________________________");
+        jLabel22.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jLabel22FocusLost(evt);
+            }
+        });
+        Campos_cadastro.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, -1, -1));
+
+        Campo_nome.setBackground(new java.awt.Color(102, 0, 153));
+        Campo_nome.setForeground(new java.awt.Color(255, 255, 255));
+        Campo_nome.setBorder(null);
+        Campo_nome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Campo_nomeActionPerformed(evt);
+            }
+        });
+        Campos_cadastro.add(Campo_nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 130, 30));
+
+        jLabel23.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel23.setText("__________________________");
+        Campos_cadastro.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 260, -1, -1));
+
+        Campo_texto_responsavel.setBackground(new java.awt.Color(102, 0, 153));
+        Campo_texto_responsavel.setForeground(new java.awt.Color(255, 255, 255));
+        Campo_texto_responsavel.setBorder(null);
+        Campos_cadastro.add(Campo_texto_responsavel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, 130, 30));
+
+        Campo_sobrenome.setBackground(new java.awt.Color(102, 0, 153));
+        Campo_sobrenome.setForeground(new java.awt.Color(255, 255, 255));
+        Campo_sobrenome.setBorder(null);
+        Campos_cadastro.add(Campo_sobrenome, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 130, 30));
+
+        jTextField5.setText("jTextField1");
+        Campos_cadastro.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 130, 30));
+
+        Campo_turma.setBackground(new java.awt.Color(102, 0, 153));
+        Campo_turma.setForeground(new java.awt.Color(255, 255, 255));
+        Campo_turma.setBorder(null);
+        Campos_cadastro.add(Campo_turma, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, 130, 30));
+
+        Campo_nascimento.setBackground(new java.awt.Color(102, 0, 153));
+        Campo_nascimento.setBorder(null);
+        Campo_nascimento.setForeground(new java.awt.Color(255, 255, 255));
+        try {
+            Campo_nascimento.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        Campo_nascimento.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                Campo_nascimentoFocusLost(evt);
+            }
+        });
+        Campos_cadastro.add(Campo_nascimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 130, 30));
+
+        Aviso_responsavel.setForeground(new java.awt.Color(255, 51, 51));
+        Aviso_responsavel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Aviso_responsavel.setText("INSIRA O NOME DO RESPONSÁVEL");
+        Campos_cadastro.add(Aviso_responsavel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 480, 220, 40));
+
+        Cadastro_concluido.setForeground(new java.awt.Color(102, 255, 102));
+        Cadastro_concluido.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cadastro_concluido.setText("CADASTRO CONCLUÍDO!!");
+        Campos_cadastro.add(Cadastro_concluido, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 480, 170, 40));
+
+        Botao_comprovante.setText("Comprovante");
+        Botao_comprovante.setBorder(null);
+        Botao_comprovante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botao_comprovanteActionPerformed(evt);
+            }
+        });
+        Campos_cadastro.add(Botao_comprovante, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 520, 120, 30));
+
+        Prencha_campos.setForeground(new java.awt.Color(255, 51, 51));
+        Prencha_campos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Prencha_campos.setText("PRENCHA TODOS OS CAMPOS POR FAVOR!");
+        Campos_cadastro.add(Prencha_campos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 460, 340, 40));
+
+        javax.swing.GroupLayout Painel_CadastroLayout = new javax.swing.GroupLayout(Painel_Cadastro);
+        Painel_Cadastro.setLayout(Painel_CadastroLayout);
+        Painel_CadastroLayout.setHorizontalGroup(
+            Painel_CadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Painel_CadastroLayout.createSequentialGroup()
+                .addComponent(Foto_cadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(Campos_cadastro, javax.swing.GroupLayout.DEFAULT_SIZE, 357, Short.MAX_VALUE))
+        );
+        Painel_CadastroLayout.setVerticalGroup(
+            Painel_CadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Foto_cadastro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(Campos_cadastro, javax.swing.GroupLayout.DEFAULT_SIZE, 560, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(Painel_Cadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 560));
+
+        Painel_relatorio.setBackground(new java.awt.Color(102, 0, 153));
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/meujframe/Images/usuario-removebg-preview-removebg-preview.png"))); // NOI18N
+
+        Fecha_Cadastro1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/meujframe/Images/icone_fechar.png"))); // NOI18N
+        Fecha_Cadastro1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Fecha_Cadastro1MouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                Fecha_Cadastro1MousePressed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel21)
+                .addGap(114, 114, 114)
+                .addComponent(Fecha_Cadastro1))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(Fecha_Cadastro1)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(22, Short.MAX_VALUE)
+                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24))
+        );
+
+        jPanel2.setBackground(new java.awt.Color(102, 0, 153));
+        jPanel2.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel17.setText("Obrigado pelo cadastro!");
+
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel18.setText("Nome : ");
+
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel19.setText("Sobrenome :");
+
+        Label_relatorio_reponsavel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Label_relatorio_reponsavel.setForeground(new java.awt.Color(255, 255, 255));
+        Label_relatorio_reponsavel.setText("Responsável :");
+
+        jLabel24.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel24.setText("Nascimento :");
+
+        jLabel26.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel26.setText("Turma :");
+
+        Relatorio_nome.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Relatorio_nome.setForeground(new java.awt.Color(255, 255, 255));
+        Relatorio_nome.setText("Qualquer coisa");
+
+        Relatorio_sobrenome.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Relatorio_sobrenome.setForeground(new java.awt.Color(255, 255, 255));
+        Relatorio_sobrenome.setText("Qualquer coisa");
+
+        Relatorio_nascimento.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Relatorio_nascimento.setForeground(new java.awt.Color(255, 255, 255));
+        Relatorio_nascimento.setText("Qualquer coisa");
+
+        Relatorio_turma.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Relatorio_turma.setForeground(new java.awt.Color(255, 255, 255));
+        Relatorio_turma.setText("Qualquer coisa");
+
+        Relatorio_responsavel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Relatorio_responsavel.setForeground(new java.awt.Color(255, 255, 255));
+        Relatorio_responsavel.setText("Qualquer coisa");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(133, 133, 133)
+                        .addComponent(jLabel17))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel19)
+                                .addGap(18, 18, 18)
+                                .addComponent(Relatorio_sobrenome, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel18)
+                                .addGap(18, 18, 18)
+                                .addComponent(Relatorio_nome, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(Label_relatorio_reponsavel)
+                                .addGap(18, 18, 18)
+                                .addComponent(Relatorio_responsavel, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel26)
+                                .addGap(18, 18, 18)
+                                .addComponent(Relatorio_turma, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel24)
+                                .addGap(18, 18, 18)
+                                .addComponent(Relatorio_nascimento, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(140, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel18)
+                    .addComponent(Relatorio_nome))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel19)
+                    .addComponent(Relatorio_sobrenome))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel24)
+                    .addComponent(Relatorio_nascimento))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel26)
+                    .addComponent(Relatorio_turma))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Label_relatorio_reponsavel)
+                    .addComponent(Relatorio_responsavel))
+                .addContainerGap(61, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout Painel_relatorioLayout = new javax.swing.GroupLayout(Painel_relatorio);
+        Painel_relatorio.setLayout(Painel_relatorioLayout);
+        Painel_relatorioLayout.setHorizontalGroup(
+            Painel_relatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        Painel_relatorioLayout.setVerticalGroup(
+            Painel_relatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Painel_relatorioLayout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(Painel_relatorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 560));
 
         getAccessibleContext().setAccessibleName("Painel_Principal");
 
@@ -184,25 +569,148 @@ public class MeuJFrame1 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Campo_senhaActionPerformed
 
-    private void Botao_cadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_cadastroActionPerformed
-        Cadastro cadastro = new Cadastro();
-        cadastro.setVisible(true);
-        
-    // TODO add your handling code here:      
-    }//GEN-LAST:event_Botao_cadastroActionPerformed
-
     private void Botao_entrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_entrarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Botao_entrarActionPerformed
-
-    private void Botao_cadastroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Botao_cadastroMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Botao_cadastroMouseClicked
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
         dispose();
     // TODO add your handling code here:
     }//GEN-LAST:event_jLabel6MouseClicked
+
+    private void jLabel7MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel7MousePressed
+
+    private void Fecha_CadastroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Fecha_CadastroMouseClicked
+        dispose();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Fecha_CadastroMouseClicked
+
+    private void Fecha_CadastroMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Fecha_CadastroMousePressed
+        dispose();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Fecha_CadastroMousePressed
+
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+        Painel_Cadastro.setVisible(true);
+        Painel_foto_login.setVisible(false);
+        Painel_login.setVisible(false);
+        Cadastro_concluido.setVisible(false);
+        Aviso_responsavel.setVisible(false);
+        Prencha_campos.setVisible(false);
+        Campo_texto_responsavel.setVisible(false);
+        Label_responsavel.setVisible(false);
+        Underline_responsavel.setVisible(false);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel7MouseClicked
+
+    private void Campo_nomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Campo_nomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Campo_nomeActionPerformed
+
+    private void jLabel22FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jLabel22FocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel22FocusLost
+
+    private void Campo_nascimentoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Campo_nascimentoFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Campo_nascimentoFocusLost
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        try {
+
+            int idade = Integer.valueOf(Campo_nascimento.getText().substring(6, 10));
+
+            if (2024 - idade <= 18) {
+                Botao_comprovante.setVisible(false);
+                Cadastro_concluido.setVisible(false);
+                Prencha_campos.setVisible(true);
+                Aviso_responsavel.setVisible(true);
+                Underline_responsavel.setVisible(true);
+                Campo_texto_responsavel.setVisible(true);
+                Label_responsavel.setVisible(true);
+                
+                if(2024 - idade <= 18 && Campo_texto_responsavel.getText().isBlank()){
+                    Botao_comprovante.setVisible(false);
+                    Cadastro_concluido.setVisible(false);
+                    Prencha_campos.setVisible(true);
+                    Aviso_responsavel.setVisible(true);
+                }else{
+                    Cadastro_concluido.setVisible(true);
+                    Botao_comprovante.setVisible(true);
+                    Prencha_campos.setVisible(false);
+                    Aviso_responsavel.setVisible(false);
+                }
+                if (Campo_nome.getText().isBlank() ||
+                        Campo_sobrenome.getText().isBlank() ||
+                        Campo_turma.getText().isBlank() ||
+                        Campo_nascimento.getText().isBlank()) {
+
+                            Cadastro_concluido.setVisible(false);
+                            Botao_comprovante.setVisible(false);
+                            Prencha_campos.setVisible(true);
+                }
+            }else{
+                if (Campo_nome.getText().isBlank() ||
+                    Campo_sobrenome.getText().isBlank() ||
+                    Campo_nascimento.getText().isBlank() ||
+                    Campo_turma.getText().isBlank()){
+                        Prencha_campos.setVisible(true);
+                        Cadastro_concluido.setVisible(false);
+                        Botao_comprovante.setVisible(false);
+                }else{
+                    Cadastro_concluido.setVisible(true);
+                    Botao_comprovante.setVisible(true);
+                    Prencha_campos.setVisible(false);
+                    Aviso_responsavel.setVisible(false);
+                }
+            }
+        }catch (Exception e) {
+            Prencha_campos.setVisible(true);
+         }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jButton1FocusLost
+        Aviso_responsavel.setVisible(false);
+        Prencha_campos.setVisible(false);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1FocusLost
+
+    private void Botao_comprovanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botao_comprovanteActionPerformed
+        int idade = Integer.valueOf(Campo_nascimento.getText().substring(6, 10));
+        if(2024 - idade < 18){
+            Painel_Cadastro.setVisible(false);
+            Painel_relatorio.setVisible(true);
+            Relatorio_responsavel.setVisible(true);
+            Label_relatorio_reponsavel.setVisible(true);
+            Relatorio_nome.setText(Campo_nome.getText());
+            Relatorio_sobrenome.setText(Campo_sobrenome.getText());
+            Relatorio_nascimento.setText(Campo_nascimento.getText());
+            Relatorio_turma.setText(Campo_turma.getText());
+            Relatorio_responsavel.setText(Campo_texto_responsavel.getText());
+        }else{
+            Painel_Cadastro.setVisible(false);
+            Painel_relatorio.setVisible(true);
+            Relatorio_nome.setText(Campo_nome.getText());
+            Relatorio_sobrenome.setText(Campo_sobrenome.getText());
+            Relatorio_nascimento.setText(Campo_nascimento.getText());
+            Relatorio_turma.setText(Campo_turma.getText());
+            Relatorio_responsavel.setVisible(false);
+            Label_relatorio_reponsavel.setVisible(false);
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Botao_comprovanteActionPerformed
+
+    private void Fecha_Cadastro1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Fecha_Cadastro1MouseClicked
+        dispose();
+    // TODO add your handling code here:
+    }//GEN-LAST:event_Fecha_Cadastro1MouseClicked
+
+    private void Fecha_Cadastro1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Fecha_Cadastro1MousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Fecha_Cadastro1MousePressed
 
     /**
      * @param args the command line arguments
@@ -240,21 +748,64 @@ public class MeuJFrame1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Botao_cadastro;
+    private javax.swing.JLabel Aviso_responsavel;
+    private javax.swing.JButton Botao_comprovante;
     private javax.swing.JButton Botao_entrar;
+    private javax.swing.JLabel Cadastro_concluido;
+    private javax.swing.JFormattedTextField Campo_nascimento;
+    private javax.swing.JTextField Campo_nome;
     private javax.swing.JPasswordField Campo_senha;
+    private javax.swing.JTextField Campo_sobrenome;
+    private javax.swing.JTextField Campo_texto_responsavel;
+    private javax.swing.JTextField Campo_turma;
     private javax.swing.JTextField Campo_usuario;
+    private javax.swing.JPanel Campos_cadastro;
+    private javax.swing.JLabel Fecha_Cadastro;
+    private javax.swing.JLabel Fecha_Cadastro1;
+    private javax.swing.JPanel Foto_cadastro;
     private javax.swing.JLabel Label_cadastro;
     private javax.swing.JLabel Label_login;
+    private javax.swing.JLabel Label_relatorio_reponsavel;
+    private javax.swing.JLabel Label_responsavel;
     private javax.swing.JLabel Label_senha;
     private javax.swing.JLabel Label_usuario;
+    private javax.swing.JPanel Painel_Cadastro;
     private javax.swing.JPanel Painel_foto_login;
     private javax.swing.JPanel Painel_login;
+    private javax.swing.JPanel Painel_relatorio;
+    private javax.swing.JLabel Prencha_campos;
+    private javax.swing.JLabel Relatorio_nascimento;
+    private javax.swing.JLabel Relatorio_nome;
+    private javax.swing.JLabel Relatorio_responsavel;
+    private javax.swing.JLabel Relatorio_sobrenome;
+    private javax.swing.JLabel Relatorio_turma;
+    private javax.swing.JLabel Underline_responsavel;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JTextField jTextField5;
     // End of variables declaration//GEN-END:variables
 }
